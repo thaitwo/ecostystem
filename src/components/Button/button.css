@@ -9,6 +9,13 @@
   display: inline-block;
   line-height: 1;
 }
+
+.button-icon {
+  height: 32px;
+  padding: 0 !important;
+  width: 32px;
+}
+
 .storybook-button--primary {
   color: white;
   background-color: #1ea7fd;

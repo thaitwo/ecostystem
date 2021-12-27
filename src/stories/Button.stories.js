@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Button } from './Button';
+// import { Button } from './Button';
+import Button from '../components/Button';
 
 export default {
   title: 'Button',
@@ -28,21 +29,22 @@ export const Primary = Template.bind({});
 Primary.args = {
   status: 'primary',
   appearance: 'filled',
-  label: 'Button'
+  label: 'Primary Button'
   // primary: true,
 };
 
-// export const Status = Template.bind({});
-// Primary.args = {
-//   status: 'primary',
-//   label: 'Button',
-// };
-
 export const Secondary = Template.bind({});
 Secondary.args = {
-  ...Primary.args,
+  // ...Primary.args,
   status: 'secondary',
+  label: 'Secondary Button'
   // appearance: 'filled',
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  status: 'success',
+  label: 'Success Button'
 };
 
 // export const Large = Template.bind({});
