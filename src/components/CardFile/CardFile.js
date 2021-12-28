@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './card.css';
+import './cardFile.css';
 import Badge from '../Badge';
 import Button from '../Button';
 
-const Card = ({ title, hasBookmarkIcon, hasEllipsisIcon, badge, hover, status, imageUrl }) => {
-  const bookmarkIcon = hasBookmarkIcon ? <Button icon='mdiDotsVertical' status='secondary' /> : '';
-  const ellipsisIcon = hasEllipsisIcon ? <Button icon='mdiBookmarkOutline' status='secondary' /> : '';
+const CardFile = ({ title, hasBookmarkIcon, hasEllipsisIcon, badge, hover, status, imageUrl }) => {
+  const bookmarkIcon = hasBookmarkIcon ? <Button label='' iconName='mdiBookmarkOutline' status='secondary' appearance='ghost' /> : '';
+  const ellipsisIcon = hasEllipsisIcon ? <Button label='' iconName='mdiDotsVertical' status='secondary' appearance='ghost' /> : '';
   const isHover = hover ? 'card-hover' : '';
 
   return (
     <div className={['card', isHover].join(' ')}>
       <div className='card-image-container'>
+        <Button label='' iconName='mdiPlay' status='secondary' appearance='outline' />
         <img src={imageUrl} className='card-image' />
       </div>
       <div className='card-body'>
@@ -22,7 +23,7 @@ const Card = ({ title, hasBookmarkIcon, hasEllipsisIcon, badge, hover, status, i
           status='warning'
           label='ER'
         />
-        <div>
+        <div className='card-footer-icon-container'>
           {bookmarkIcon}
           {ellipsisIcon}
         </div>
@@ -31,16 +32,15 @@ const Card = ({ title, hasBookmarkIcon, hasEllipsisIcon, badge, hover, status, i
   )
 }
 
-Card.propTypes = {
+CardFile.propTypes = {
   hasBookmarkIcon: PropTypes.bool,
   hasEllipsisIcon: PropTypes.bool,
   hover: PropTypes.bool,
-  status: PropTypes.oneOf(['primary', 'secondary', 'basic', 'success', 'warning', 'danger']),
   onClick: PropTypes.func,
   title: PropTypes.string.isRequired
 };
 
-Card.defaultProps = {
+CardFile.defaultProps = {
   hasBookmarkIcon: true,
   hasEllipsisIcon: true,
   hover: false,
@@ -48,4 +48,4 @@ Card.defaultProps = {
   title: 'Study Drug Safety & Efficacy Data Sheet US - Approved'
 };
 
-export default Card;
+export default CardFile;

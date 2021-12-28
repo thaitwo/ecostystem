@@ -2,7 +2,9 @@
   border: 1px solid #e1e1e1;
   border-radius: 6px;
   box-shadow: rgb(23 43 77 / 4%) 0px 1px 1px, rgb(23 43 77 / 4%) 0px 1px 2px;
-  max-width: 320px;
+  box-sizing: border-box;
+  height: 266px;
+  max-width: 280px;
   overflow: hidden;
   transition: all .2s;
 }
@@ -20,19 +22,27 @@
 }
 
 .card-image-container {
+  background: black;
   border-bottom: 1px solid #e1e1e1;
   display: flex;
+  position: relative;
+}
+
+.card-image-container button {
+  bottom: 12px;
+  right: 12px;
+  position: absolute;
 }
 
 .card-image {
-  height: 180px;
-  width: 320px;
-  object-fit: cover;
+  height: 160px;
+  width: 300px;
+  object-fit: contain;
   object-position: top;
 }
 
 .card-body {
-  padding: 12px;
+  padding: 8px 12px 12px;
 }
 
 .card-body p {
@@ -48,5 +58,13 @@
   border-top: 1px solid #eee;
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 8px;
+}
+
+.card-footer-icon-container {
+  display: flex;
+}
+
+.card-footer-icon-container button {
+  margin: 0;
 }

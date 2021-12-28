@@ -3,28 +3,30 @@ import PropTypes from 'prop-types';
 import './button.css';
 
 import Icon from '@mdi/react'
-import * as Icons from '@mdi/js';
-import { mdiDotsVertical, mdiBookmarkOutline } from '@mdi/js'
+import * as MatIcons from '@mdi/js';
 
 /**
  * Primary UI component for user interaction
  */
-const Button = ({ status, icon, size, label, appearance, ...props }) => {
-  // const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const Button = ({ status, iconName, size, label, appearance, ...props }) => {
+  let checkLabel = false;
+  if (/\S/.test(label)) {
+    checkLabel = true;
+  }
+  const trimmedLabel = checkLabel ? label.trim() : '';
+  const buttonLabel = trimmedLabel ? <span>{trimmedLabel}</span> : '';
   const mode = `storybook-button--${status}`;
   const app = `storybook-button--${status}-${appearance}`;
-  const buttonLabel = label ? label : '';
-  console.log("LABEL", typeof label === 'undefined');
-  const buttonSize = icon && (typeof label === 'undefined') ? 'button-icon' : '';
-  // const mdiIcon = Icons[icon];
-  // console.log(mdiIcon);
+  const buttonSize = iconName && !checkLabel ? 'button-icon' : '';
+  const iconPath = MatIcons[iconName];
+  const hasIconText = iconName && checkLabel ? 'button-icon-text' : '';
 
-  const buttonIcon = <Icon path={icon} title="User Profile" size={1} />;
+  const buttonIcon = iconName ? <Icon path={iconPath} title="User Profile" size={1} /> : '';
 
   return (
     <button
       type="button"
-      className={[buttonSize, 'storybook-button', `storybook-button--${size}`, mode, app].join(' ')}
+      className={[buttonSize, 'storybook-button', `storybook-button--${size}`, hasIconText, mode, app].join(' ')}
       {...props}
     >
       {buttonIcon}
@@ -41,7 +43,7 @@ Button.propTypes = {
    * Button contents
    */
   label: PropTypes.string,
-  icon: PropTypes.string,
+  iconName: PropTypes.string,
   /**
    * Is this the principal call to action on the page?
    */

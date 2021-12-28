@@ -29,7 +29,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   status: 'primary',
   appearance: 'filled',
-  label: 'Primary Button'
+  label: 'Primary'
   // primary: true,
 };
 
@@ -37,14 +37,26 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   // ...Primary.args,
   status: 'secondary',
-  label: 'Secondary Button'
+  label: 'Secondary'
   // appearance: 'filled',
 };
 
 export const Success = Template.bind({});
 Success.args = {
   status: 'success',
-  label: 'Success Button'
+  label: 'Success'
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  status: 'warning',
+  label: 'Warning'
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  status: 'danger',
+  label: 'Danger'
 };
 
 // export const Large = Template.bind({});
