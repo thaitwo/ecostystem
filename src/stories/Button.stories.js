@@ -9,7 +9,7 @@ export default {
   argTypes: {
     status: { 
       control: { type: 'select' },
-      options: [ 'primary', 'secondary', 'success', 'warning', 'danger' ],
+      options: [ 'primary', 'basic', 'success', 'warning', 'danger' ],
     },
     appearance: { 
       control: { type: 'select' },
@@ -33,11 +33,11 @@ Primary.args = {
   // primary: true,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const Basic = Template.bind({});
+Basic.args = {
   // ...Primary.args,
-  status: 'secondary',
-  label: 'Secondary'
+  status: 'basic',
+  label: 'Basic'
   // appearance: 'filled',
 };
 
@@ -58,15 +58,3 @@ Danger.args = {
   status: 'danger',
   label: 'Danger'
 };
-
-// export const Large = Template.bind({});
-// Large.args = {
-//   size: 'large',
-//   label: 'Button',
-// };
-
-// export const Small = Template.bind({});
-// Small.args = {
-//   size: 'small',
-//   label: 'Button',
-// };

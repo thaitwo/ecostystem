@@ -37,7 +37,7 @@ const Button = ({ status, iconName, size, label, appearance, ...props }) => {
 };
 
 Button.propTypes = {
-  status: PropTypes.oneOf(['primary', 'secondary', 'basic', 'success', 'warning', 'danger']),
+  status: PropTypes.oneOf(['primary', 'basic', 'basic', 'success', 'warning', 'danger']),
   appearance: PropTypes.oneOf(['filled', 'outline', 'ghost']),
   /**
    * Button contents
@@ -64,8 +64,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   status: 'primary',
-  // label: 'Button',
-  // primary: true,
   appearance: 'filled',
   size: 'medium',
   onClick: undefined,

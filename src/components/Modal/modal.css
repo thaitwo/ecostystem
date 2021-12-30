@@ -1,0 +1,49 @@
+.modal {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  color: black;
+}
+
+.modal--small {
+  width: 360px;
+}
+
+.modal--medium {
+  width: 560px;
+}
+
+.modal--large {
+  width: 800px;
+}
+
+.modal-header {
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  color: black;
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+  padding: 0 12px 0 24px;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal p {
+  margin-top: 0;
+}
+
+.modal p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  align-items: center;
+  border-top: 1px solid #e8e8e8;
+  color: black;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  padding: 0 12px;
+}

@@ -102,27 +102,27 @@
   background-color: rgba(203, 56, 49, 0.16);
   border: none;
 }
-.storybook-button--secondary {
+.storybook-button--basic {
   color: #494949;
   background-color: #eee;
 }
-.storybook-button--secondary-outline {
+.storybook-button--basic-outline {
   border: 1px solid #dbdbdb;
   color: #494949;
   background-color: white;
 }
-.storybook-button--secondary:hover {
+.storybook-button--basic:hover {
   background-color: #dbdbdb;
 }
-.storybook-button--secondary-outline:hover {
+.storybook-button--basic-outline:hover {
   background-color: #eee;
 }
-.storybook-button--secondary-ghost {
+.storybook-button--basic-ghost {
   border: none;
   color: #494949;
   background-color: white;
 }
-.storybook-button--secondary-ghost:hover {
+.storybook-button--basic-ghost:hover {
   background-color: #eee;
 }
 .storybook-button--small {
